@@ -2,9 +2,67 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=580, user-scalable=no" />
   <title>Impressão do Pedido</title>
-  <link rel="stylesheet" href="impressão.css" />
+
+  <style>
+    @page {
+      size: 58mm auto;
+      margin: 0;
+    }
+
+    html, body {
+      width: 58mm;
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background: white;
+      color: black;
+    }
+
+    #conteudo {
+      width: 58mm;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    .ticket {
+      border: 1px dashed black;
+      padding: 8px;
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .ticket h4 {
+      font-size: 18px;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .ticket p {
+      font-size: 16px;
+      margin: 3px 0;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    @media print {
+      .botoes {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="conteudo">
@@ -15,7 +73,6 @@
     <button onclick="window.print()">Imprimir</button>
     <button onclick="voltar()">Voltar</button>
   </div>
-  <script src="impressão.js"></script>
+  <script src="impressao.js"></script>
 </body>
 </html>
-
