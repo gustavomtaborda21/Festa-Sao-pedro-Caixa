@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Festa de São Pedro - PDV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Festa de São Pedro</h1>
+  </header>
+
+  <main>
+    <section id="produtos" class="grid"></section>
+
+    <section id="carrinho">
+      <h2>Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p>Total: R$ <span id="total">0.00</span></p>
+      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+    </section>
+
+    <section id="pagamento" style="display: none;">
+      <h2>Forma de Pagamento</h2>
+      <button onclick="selecionarPagamento('cartao')">Cartão</button>
+      <button onclick="selecionarPagamento('dinheiro')">Dinheiro</button>
+      <div id="trocoSection" style="display: none;">
+        <label>Valor recebido: R$
+          <input type="number" id="valorRecebido" onchange="calcularTroco()" />
+        </label>
+        <p>Troco: R$ <span id="troco">0.00</span></p>
+      </div>
+      <button onclick="confirmarPagamento()">Confirmar</button>
+    </section>
+
+    <section id="impressao" style="display: none;">
+      <div id="cupom"></div>
+      <div id="tickets"></div>
+      <button onclick="window.print()">Imprimir</button>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="fecharCaixa()">Fechar Caixa</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

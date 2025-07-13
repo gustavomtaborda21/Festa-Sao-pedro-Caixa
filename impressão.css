@@ -1,0 +1,53 @@
+
+/* impressao.css */
+
+body {
+  font-family: 'Courier New', monospace;
+  background: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#conteudo {
+  width: 55mm;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#cupom, #tickets {
+  border-bottom: 1px dashed #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.ticket {
+  margin-bottom: 10px;
+  border: 1px dashed #000;
+  padding: 8px;
+  text-align: center;
+}
+
+.ticket h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.ticket p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+@media print {
+  .botoes {
+    display: none;
+  }
+}
+
