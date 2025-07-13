@@ -3,7 +3,7 @@
 
 @page {
   margin: 0;
-  size: 58mm auto;
+  size: 80mm auto;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 #conteudo {
-  width: 58mm;
+  width: 80mm;
   margin: 0;
   padding: 0;
 }
@@ -36,11 +36,11 @@ body {
 }
 
 .ticket h4 {
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .ticket p {
-  font-size: 16px;
+  font-size: 28px;
 }
 
 
