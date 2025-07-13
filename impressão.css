@@ -10,10 +10,10 @@ body {
 }
 
 #conteudo {
-  width: 55mm;
-  margin: 0 auto;
-  padding: 10px;
+  width: 58mm;
+  font-size: 15px; /* aumenta a fonte base */
 }
+
 
 #cupom, #tickets {
   border-bottom: 1px dashed #333;
@@ -29,14 +29,13 @@ body {
 }
 
 .ticket h4 {
-  margin: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .ticket p {
-  margin: 2px 0;
-  font-size: 14px;
+  font-size: 16px;
 }
+
 
 .botoes {
   display: flex;
