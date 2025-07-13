@@ -1,6 +1,11 @@
 
 /* impressao.css */
 
+@page {
+  margin: 0;
+  size: 58mm auto;
+}
+
 body {
   font-family: 'Courier New', monospace;
   background: white;
@@ -11,8 +16,10 @@ body {
 
 #conteudo {
   width: 58mm;
-  font-size: 15px; /* aumenta a fonte base */
+  margin: 0;
+  padding: 0;
 }
+
 
 
 #cupom, #tickets {
