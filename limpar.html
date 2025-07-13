@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limpar Caixa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #fefefe;
+      text-align: center;
+    }
+    input {
+      font-size: 1.5em;
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Limpar Vendas</h2>
+  <p>Digite a senha para zerar o sistema:</p>
+  <input type="password" id="senha" placeholder="Senha" />
+  <br>
+  <button onclick="limpar()">Limpar Caixa</button>
+  <p id="mensagem"></p>
+
+  <script>
+    function limpar() {
+      const senhaCorreta = "saoPedro2025"; // você pode mudar a senha aqui
+      const senhaDigitada = document.getElementById("senha").value;
+      const msg = document.getElementById("mensagem");
+
+      if (senhaDigitada === senhaCorreta) {
+        localStorage.removeItem("vendas");
+        msg.textContent = "Caixa limpo com sucesso!";
+        msg.style.color = "green";
+      } else {
+        msg.textContent = "Senha incorreta!";
+        msg.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
